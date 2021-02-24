@@ -1,11 +1,11 @@
 import React from 'react';
-import './App.css';
+import './AppMessager.css';
 
 
 
 
 
-class App extends React.Component {
+class AppMessager extends React.Component {
   constructor(props) {
     super(props);
     this.state = { messages: ["old message 1", "old message 2"] };
@@ -40,4 +40,4 @@ class App extends React.Component {
 }
 
 
-export default App;
+export default AppMessager;
