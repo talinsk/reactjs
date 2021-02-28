@@ -1,5 +1,5 @@
 import './AppMessager.css';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback, useMemo } from 'react';
 
 
 
@@ -16,24 +16,28 @@ function MessagesFunс() {
 
     const lastEl = messages[messages.length - 1];
     if (lastEl.sender === 0) {
-      setTimeout(() => {
+      const timerId = setTimeout(() => {
         setMessages([...messages, { message: `new message ${messages.length + 1}`, sender: 1, author: "robot" }]);  
       }, 1000);
+
+      return () => {
+        clearTimeout(timerId);
+      }
     }
-  });
+  }, [messages]);
 
 
-  const msgs = messages.map((m, ind) =>
+  const msgs = useMemo(() => messages.map((m, ind) =>
       <div key={ind}>{m.author}: {m.message}</div>
-    );
+  ), [messages]);
 
-  const addMessage = () => {
+  const addMessage = useCallback(() => {
     setMessages([...messages, { message: `new message ${messages.length + 1}`, sender: 0, author: "Me" }]);
-  }
+  }, [messages]);
 
-  const clear = () => {
+  const clear = useCallback(() => {
     setMessages([]);
-  }
+  }, []);
 
   return (
     
