@@ -4,7 +4,7 @@ function HeaderComponent() {
   
   return (
     <div className="header-comp">
-        123
+        MyMessenger
     </div>
     
   );

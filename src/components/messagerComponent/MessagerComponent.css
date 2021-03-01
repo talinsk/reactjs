@@ -1,13 +1,34 @@
 .app-body {
-  /*background-color: #282c34;*/
+  width: 100%;
+  background-color: #f7f9fd;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: start;
-  font-size: calc(10px + 2vmin);
+  justify-content: flex-start;
+  font-size: 20px;
   margin: 10px;
-  /*color: white;*/
+  padding: 10px;
+  border-radius: 10px;
+  
+}
+
+.text-author {
+  background-color: white;
+  margin: 10px;
+  border-radius: 7px;
+  border: 1px solid #e6e6e6;
+  padding-left: 10px;
+  padding-bottom: 5px;
+}
+
+.text-robot {
+  background-color: rgb(194, 215, 255);
+  margin: 10px;
+  border-radius: 7px;
+  opacity: 0.7;
+  border: 1px solid #e6e6e6;
+  padding-left: 10px;
+  padding-bottom: 5px;
 }
 
 
