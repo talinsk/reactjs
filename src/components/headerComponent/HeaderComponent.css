@@ -6,7 +6,17 @@
   padding-top: 15px;
   padding-left: 15px;
   font-size: large;
+  display: flex;
 }
 
+.header-comp ul {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+}
+
+.header-comp ul li{
+  margin-right: 15px;
+}
 
 
