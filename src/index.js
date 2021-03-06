@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './AppMessagerFunc';
+import App from './components/appComponent/AppComponent';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
