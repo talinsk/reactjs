@@ -21,7 +21,7 @@ function ChatListComponent() {
             <ListItemText
               primary="Brunch this weekend?"
               secondary={
-                <React.Fragment>
+                <>
                   <Typography
                     component="span"
                     variant="body2"
@@ -30,7 +30,7 @@ function ChatListComponent() {
                     Ali Connors
                   </Typography>
                   {" — I'll be in your neighborhood doing errands this…"}
-                </React.Fragment>
+                </>
               }
             />
           </ListItem>
@@ -42,7 +42,7 @@ function ChatListComponent() {
             <ListItemText
               primary="Summer BBQ"
               secondary={
-                <React.Fragment>
+                <>
                   <Typography
                     component="span"
                     variant="body2"
@@ -51,7 +51,7 @@ function ChatListComponent() {
                     to Scott, Alex, Jennifer
                   </Typography>
                   {" — Wish I could come, but I'm out of town this…"}
-                </React.Fragment>
+                </>
               }
             />
           </ListItem>
@@ -63,7 +63,7 @@ function ChatListComponent() {
             <ListItemText
               primary="Oui Oui"
               secondary={
-                <React.Fragment>
+                <>
                   <Typography
                     component="span"
                     variant="body2"
@@ -72,7 +72,7 @@ function ChatListComponent() {
                     Sandra Adams
                   </Typography>
                   {' — Do you have Paris recommendations? Have you ever…'}
-                </React.Fragment>
+                </>
               }
             />
           </ListItem>
