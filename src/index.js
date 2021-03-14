@@ -4,7 +4,8 @@ import './index.css';
 import App from './components/appComponent/AppComponent';
 import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
-import store from './store/store';
+import {store, persistor} from './store/store';
+
 
 ReactDOM.render(
   <React.StrictMode>
