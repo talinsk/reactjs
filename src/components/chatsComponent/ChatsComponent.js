@@ -1,12 +1,10 @@
-import { Author } from '../../utils/authors'
 import React, { useState, useMemo, useCallback } from 'react';
 import { useParams } from "react-router-dom";
-import { flexbox } from '@material-ui/system';
 import Box from '@material-ui/core/Box';
 import MessagerComponent from '../messagerComponent/MessagerComponent'
 import ChatListComponent from '../chatListComponent/ChatListComponent'
 import { useSelector, useDispatch } from 'react-redux'
-import { addMessage } from "../../store/chats/chatsActions";
+import { addMessageMiddleware } from "../../store/chats/chatsActions";
 
 export default function ChatsComponent() {
 
@@ -23,7 +21,7 @@ export default function ChatsComponent() {
             if (!selectedChat)
                 return;
 
-            dispatch(addMessage(selectedChat.id, msg));
+            dispatch(addMessageMiddleware(selectedChat.id, msg));
         },
         [chats, selectedChat]
     );
