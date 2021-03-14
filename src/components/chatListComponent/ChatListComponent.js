@@ -19,7 +19,7 @@ function ChatListComponent({ chats, chatId }) {
           </ListItemAvatar>
           <Link to={`/chats/${ch.id}`}>
             <ListItemText
-              primary={ch.id + ' - ' + ch.name}
+              primary={`${ch.name} - ${ch.user}`}
             />
           </Link>
         </ListItem>
