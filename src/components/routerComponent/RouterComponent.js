@@ -3,6 +3,7 @@ import Home from "../homeComponent/HomeComponent";
 import Profile from "../profileComponent/ProfileComponent";
 import HeaderComponent from '../headerComponent/HeaderComponent'
 import Chats from "../chatsComponent/ChatsComponent";
+import Posts from "../postsComponent/PostsComponent";
 
 
 export default function Router() {
@@ -12,6 +13,10 @@ export default function Router() {
 
 
       <Switch>
+        <Route path="/test-posts">
+          <Posts />
+        </Route>
+
         <Route path="/profile">
           <Profile />
         </Route>
