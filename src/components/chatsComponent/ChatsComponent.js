@@ -49,8 +49,9 @@ export default function ChatsComponent() {
 
     const addMessage = useCallback(
         (msg) => {
-            if (!selectedChat)
+            if (!selectedChat) {
                 return;
+            }
 
             const chatIndex = chats.findIndex(c => c.id === selectedChat.id);
             const newChats = [...chats];
