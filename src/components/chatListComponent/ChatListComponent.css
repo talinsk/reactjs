@@ -1,7 +1,7 @@
 .chat-comp {
-  background-color: #d3d4d4;
   min-height: 200px;
   max-width: 400px;
+  min-width: 300px;
 }
 
 .chat-list {
@@ -9,5 +9,8 @@
   background-color: #fff;
 }
 
+.chat-selected {
+  background-color: #eee;
+}
 
 
