@@ -1,6 +1,7 @@
 import './HeaderComponent.css';
 import { Link } from "react-router-dom";
 import { useSelector } from 'react-redux';
+import PushToggle from "../pushToggleComponent/PushToggleComponent"
 
 function HeaderComponent() {
   
@@ -28,7 +29,10 @@ function HeaderComponent() {
 
         </ul>
 
-        <div className="username">
+        <div className="right-block">
+          <div className="push-container">
+            <PushToggle />
+          </div>
           {profile.name}
         </div>
     </div>
@@ -38,7 +42,3 @@ function HeaderComponent() {
 
 
 export default HeaderComponent;
-
-
-
-

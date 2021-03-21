@@ -5,6 +5,7 @@ import MessagerComponent from '../messagerComponent/MessagerComponent'
 import ChatListComponent from '../chatListComponent/ChatListComponent'
 import { useSelector, useDispatch } from 'react-redux'
 import { addMessageMiddleware } from "../../store/chats/chatsActions";
+import './ChatsComponent.css';
 
 export default function ChatsComponent() {
 
@@ -29,7 +30,7 @@ export default function ChatsComponent() {
 
   return (
       <>
-        <Box display="flex">
+        <Box display="flex" className="chats-container">
           
           <ChatListComponent chats={chats} chatId={params.chatId} />
           
@@ -38,8 +39,6 @@ export default function ChatsComponent() {
           }
           
         </Box>
-        
-
       </>
   )
 
