@@ -11,9 +11,14 @@ import { Link } from "react-router-dom";
 
 
 function ChatListComponent({ chats, chatId }) {
+
+  const getChatClass = (chat) => {
+    return `${chat.id == chatId ? "chat-selected" : ""} ${chat.isHighlighted ? "chat-highlighted" : ""}`;
+  }
+
   const chatsList = useMemo(() => chats.map((ch, ind) => 
       <React.Fragment key={ch.id}>
-        <ListItem alignItems="flex-start" className={ ch.id == chatId ? "chat-selected" : "" }>
+        <ListItem alignItems="flex-start" className={ getChatClass(ch) }>
           <ListItemAvatar>
             <Avatar alt={ch.user} />
           </ListItemAvatar>

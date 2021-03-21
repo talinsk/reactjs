@@ -24,28 +24,6 @@ function MessagerComponent({ messages, onAddMessage }) {
   
   const [messageToSend, setMessageToSend] = useState("");
 
-  useEffect(() => {
-    // произошло обновление
-    
-    if (messages.length == 0)
-      return;
-
-    const lastEl = messages[messages.length - 1];
-    if (lastEl.sender.id === 1) {
-      const timerId = setTimeout(() => {
-        if (onAddMessage) {
-          const newRobotMessage = { message: `new message ${messages.length + 1}`, sender: Author.Robot };
-          onAddMessage(newRobotMessage);
-        }
-      }, 300);
-
-      return () => {
-        clearTimeout(timerId);
-      }
-    }
-  }, [messages]);
-
-
   const msgs = useMemo(() => messages?.map((m, ind) => 
     <div className={m.sender.id == 1 ? 'text-author' : 'text-robot'} key={ind}>{m.sender.name}: {m.message}</div>
   ), [messages]);
