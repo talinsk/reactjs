@@ -1,8 +1,11 @@
 import './HeaderComponent.css';
-import { BrowserRouter, Link, Switch, Route } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { useSelector } from 'react-redux';
 
 function HeaderComponent() {
   
+  const profile = useSelector((state) => state.profile);
+
   return (
     <div className="header-comp">
         MyMessenger
@@ -20,6 +23,10 @@ function HeaderComponent() {
           </li>
           
         </ul>
+
+        <div className="username">
+          {profile.name}
+        </div>
     </div>
     
   );
