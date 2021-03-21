@@ -22,6 +22,10 @@ function HeaderComponent() {
             <Link to="/profile">Profile</Link>
           </li>
           
+          <li>
+            <Link to="/test-posts">API Posts</Link>
+          </li>
+
         </ul>
 
         <div className="username">
