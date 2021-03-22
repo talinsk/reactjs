@@ -1,0 +1,9 @@
+.chats-container {
+    flex-direction: row;
+}
+
+@media screen and (max-width: 650px){
+    .chats-container {
+        flex-direction: column;
+    }
+}
